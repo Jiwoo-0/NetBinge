@@ -20,6 +20,7 @@ const Homepage = () => {
                     <div className="flex space-x-5">
                         <a href="#" className="flex items-center py-2 px-6 bg-red-800 rounded-md hover:bg-red-600 transition"><Play className="w-5 h-5 mr-2"/>Play</a>
                         <a href="#" className="flex items-center py-2 px-4 border text-white rounded-md hover:bg-white hover:text-black transition"><Bookmark className="w-5 h-5 mr-2"/>Add Watchlist</a>
+                        <a href="#" className="flex items-center py-2 px-4 border text-white rounded-md hover:bg-white hover:text-black transition"><Bookmark className="w-5 h-5 mr-2"/>Add Watchlist</a>
                     </div>
                 </div>
             </div>
