@@ -1,4 +1,4 @@
-import { navItems } from "../constants";
+import { navItems, COLORS } from "../constants";
 import {Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/Logo.svg";
@@ -28,7 +28,17 @@ const Navbar = () => {
                     </ul>
                     <div className="hidden lg:flex space-x-5 items-center">
                         <a href="#" className="border py-2 px-3 rounded-md">Log in</a>
-                        <a href="#" className="py-2 px-3 rounded-md bg-red-800 font-bold">Sign Up</a>
+                        {/* Sign up uses the primary color (falls back to JS COLORS if CSS var not found) */}
+                        <a
+                            href="#"
+                            className="py-2 px-3 rounded-md font-bold"
+                            style={{
+                                backgroundColor: 'var(--color-primary, ' + COLORS.PRIMARY + ')',
+                                color: 'var(--color-primary-foreground, ' + COLORS.PRIMARY_FOREGROUND + ')',
+                            }}
+                        >
+                            Sign Up
+                        </a>
                     </div>
                     <div className="md:flex flex-col justify-end lg:hidden ">
                         <button onClick={toggleNavbar}>
