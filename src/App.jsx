@@ -3,14 +3,23 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Navbar from './components/Navbar'
 import Header from './components/Homepage'
-import LandingPage from './components/ecommerce/landing_page/Landing_page'
+import Landing_page from './components/ecommerce/Landing_page'
+import Shopping_page from './components/ecommerce/Shopping_page'
+import ShoppingCart_page from './components/ecommerce/ShoppingCart_page'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <LandingPage />
+      {/* <Shopping_page /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing_page />}></Route>
+          <Route path="/shop" element={<Shopping_page />}></Route>
+          <Route path="/cart" element={<ShoppingCart_page />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

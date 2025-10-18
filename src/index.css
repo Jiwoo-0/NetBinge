@@ -25,4 +25,8 @@
   --color-secondary-foreground: #0D0C0F;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 

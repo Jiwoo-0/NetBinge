@@ -1,6 +1,6 @@
 import Navbar_ecom from "./Navbar_ecom";
 import Footer_ecom from "./Footer_ecom";
-import { featuredProducts_landingPage, categories_landingPage } from "../../../constants/DataList";
+import { featuredProducts_landingPage, categories_landingPage } from "../../constants/DataList";
 
 const Landing_page = () => {
   return (
@@ -65,7 +65,7 @@ const Landing_page = () => {
           </h2>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {categories_landingPage.map((category, index) => (
-              <a key={index} className="group transition hover:scale-105" href="#">
+              <a key={index} className="group transition hover:scale-105" href={category.href}>
                 <div
                   className="aspect-square w-full overflow-hidden rounded-lg bg-cover bg-center"
                   style={{ backgroundImage: `url('${category.image}')` }}
