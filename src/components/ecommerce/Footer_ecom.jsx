@@ -1,5 +1,10 @@
+import XIcon from '@mui/icons-material/X';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 const Footer_ecom = () => {
+  const socialIcons = [ FacebookIcon, InstagramIcon, XIcon ];
+
   return (
     <footer className="bg-gray-100 dark:bg-black/20">
       <div className="container mx-auto px-4 py-10 text-center lg:px-10">
@@ -16,28 +21,19 @@ const Footer_ecom = () => {
         </div>
 
         <div className="mb-8 flex justify-center gap-6">
-          {[...Array(3)].map((_, index) => (
+          {socialIcons.map((Icon, index) => (
             <a
               key={index}
               href="#"
               className="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary"
             >
-              <svg
-                fill="currentColor"
-                height="24px"
-                width="24px"
-                viewBox="0 0 256 256"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* Replace with actual SVG paths for each icon if needed */}
-                <path d="M0 0h256v256H0z" fill="none" />
-              </svg>
+              <Icon fontSize="medium" />
             </a>
           ))}
         </div>
 
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          © 2024 NetBinge. All rights reserved.
+          © 2025 NetBinge ● Created By Aaron Ropeta ● All rights reserved.
         </p>
       </div>
     </footer>

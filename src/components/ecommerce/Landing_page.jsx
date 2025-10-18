@@ -1,57 +1,8 @@
 import Navbar_ecom from "./Navbar_ecom";
 import Footer_ecom from "./Footer_ecom";
+import { featuredProducts_landingPage, categories_landingPage } from "../../constants";
 
 const Landing_page = () => {
-  const featuredProducts = [
-    {
-      title: "Classic Movie Tee",
-      description: "Show your love for classic cinema.",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuAA_c-kAQgITOmbjCpb4Q__XfPexIalvcucRR54ED0vEbA7X6Kt5YUMmdgmFUv2jayHfGrntbITU7umls48xXlcuCYN-vBd8776Vc-yySakGRVNyZn0n5oPjjxuxhfkjPz_YhuddCshiBquDdoNxWZIEiXFW5WLNorPGoWSAr8knXv5XRQvr3XNiXmtmoiOCThLHBQg1AJb67KtQCEFgLmFloa9ZhNsFYZNE0fl3Mg0Y_vKg5gWx-DGBi0_I9lzl9sPK7IeCO2yyO8",
-    },
-    {
-      title: "Limited Edition Poster",
-      description: "A must-have for any collector.",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuDCBZUjlSTr_-qcT8QTxLN1HyzXkGOeoo-aSGmhultcIXCspJmX09gfiEGzN8nFVcxXFpMNCMZ16uxXZBtJWGNARDVIbBiavtprtp7slXzukP7gLaKM5Cmws5Hca3VQQlAolUCj2TQOOLP3b15h-MZvzfK9ali5ll3_74RoU6W0og-bcifVfubccr_JL4yY-B1Fti3mO2tNetcF2nvCybbuC75n2CcqxgYA-HODZ8cdAMtN42tOWAAxyZmIdoveFP6Crcz9xjcTD00",
-    },
-    {
-      title: "Movie Buff Mug",
-      description: "Enjoy your favorite beverage in style.",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuCLdstatAUCmhbLj1KLi0-HJNPkX3zxyLCa5hdi_dbeGgY_ty_hWVmA3D-Yy9b18_TPy0IFg2gv4VKfnN7Hl270Hk6FGZE3RS3qpBNz0PnKemQWcNL4TtOI-M9NOCRaxYUlJcVVnDYsD6wfd5c84lF2gQWD3fcwmWxCZqgF9kk38CC2nqRvzwdkzwvHUghoD54v26e0xt4dsCKuhEclq745HGTpcJs1xa0Ejer8BZ2Wj9KtJNVqFa7_zyD_Ridcy3NQok35nSGvMvY",
-    },
-    {
-      title: "Cinema Keychain",
-      description: "Carry a piece of the movies with you.",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-HOG8z-RF68VcpGs0BTnEtcbkIOoMKFKrq0GMipvRw87dzmhjFPZ5yK9nAUI3VH3_J1gHiGDWBjfdlVCR1pbbrFP3fNYtzos75pUyzZSEF8P82SGotycq-9hTnFsf8K1xbqvSuejbuskDwcX47XE6nEkgyhukZ3pWRO6B2Ua4AB7BJBAV1NoTOVJ_MRQjl_ySoiNr3rlZkOeUzlYIFyDdUhJ0YbaPKzDgeG0AzUDb6eiu0-jv5z6heTQb0SgunOKT_SW63XWvvM",
-    },
-  ];
-
-  const categories = [
-    {
-      name: "Apparel",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuAb-0r8fBKY-G7lZDyE9MJCVOJXf1iR12KP0iGigcZdGf4YnOEOEDrzDDfV12OZoGQaJYf4gjUZ3oB19d4LxeyPusyj_lhxLXRy6sgnXS1WxMKsENZApObHC21qP4FLAcAqOkegr6qnpaALGPOgxA3dxxj-K8LqgrfZJf00sk09UvxSW67MoMQqkxgQT69QQNh14bZ9bP2l23YZUwcVs8ShLLRD_-So_1EjXmJOTakbBiGPNgKcTpCcoL3pVOI0Mgbcifb0fgY4AaE",
-    },
-    {
-      name: "Posters",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuATEcCGTg4FTzCM1iXVt1Oe-LTqfnmjo_FM0WbzermiAOOlVBL2_bAsp6w-2NJwwWCx7J_Byn34PJBlNXLMMhW62x5W6KbVslTEQAoV5BAMhVomyrFNWxCsKH7SEnUz_UmmSOpVp5bta9m_MIsXZF6hZ25xjjAC9aTFk_nkezCA2Td177GhZn5bE7DcnWvWRRuGkwP8gjWolWH1cnn_AqTtgUwL8iLp5ees4jvuVo_ZBReCZ0UYxH9fsuqxrQBRwNOipEDugkFHAec",
-    },
-    {
-      name: "Mugs",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuBt5KbdQztFGp1IeWTrrBTgqvAXI4uIixf0tWc4BsTNBGj3YINFfJz3dJGFLJyTlZPCucsJLDH5tpBW8U7Q6Y5cHo3nUbG5_nvl9nJ3YEjnrUqFBoXmf1ZGs3SmrrH17-62sbEe1DoG6aFQh1zKSeBEjYpmy48Dz5OzX0vyXMVykv47K0wVvBjihFMerDoxCwaJFp2cWXdYIccftJKq1mQp_Tz6mQ4B0AONbZOcr8jLL1J0XsKg_nV7Xyk351BNSq7ym1s28QUcGIY",
-    },
-    {
-      name: "Accessories",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-HOG8z-RF68VcpGs0BTnEtcbkIOoMKFKrq0GMipvRw87dzmhjFPZ5yK9nAUI3VH3_J1gHiGDWBjfdlVCR1pbbrFP3fNYtzos75pUyzZSEF8P82SGotycq-9hTnFsf8K1xbqvSuejbuskDwcX47XE6nEkgyhukZ3pWRO6B2Ua4AB7BJBAV1NoTOVJ_MRQjl_ySoiNr3rlZkOeUzlYIFyDdUhJ0YbaPKzDgeG0AzUDb6eiu0-jv5z6heTQb0SgunOKT_SW63XWvvM",
-    },
-  ];
-
   return (
     <>
       <Navbar_ecom />
@@ -84,7 +35,7 @@ const Landing_page = () => {
             Featured Products
           </h2>
           <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {featuredProducts.map((product, index) => (
+            {featuredProducts_landingPage.map((product, index) => (
               <div
                 key={index}
                 className="w-64 min-w-64 snap-start sm:w-72 sm:min-w-72"
@@ -113,8 +64,8 @@ const Landing_page = () => {
             Shop by Category
           </h2>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-            {categories.map((category, index) => (
-              <a key={index} className="group" href="#">
+            {categories_landingPage.map((category, index) => (
+              <a key={index} className="group transition hover:scale-105" href="#">
                 <div
                   className="aspect-square w-full overflow-hidden rounded-lg bg-cover bg-center"
                   style={{ backgroundImage: `url('${category.image}')` }}
@@ -128,16 +79,22 @@ const Landing_page = () => {
         </section>
 
         <section className="bg-background-light py-20 dark:bg-background-dark sm:py-24">
-          <div className="container mx-auto flex flex-col items-center gap-6 px-4 text-center lg:px-10">
+          <div 
+            className="w-[90vw] bg-red-600/20 rounded-lg container mx-auto flex flex-col items-center gap-6 p-8 text-center lg:px-10"
+            style={{
+              backgroundImage: `linear-gradient(rgba(199, 30, 30, 0.2), rgba(199, 30, 30, 0.4)), url('/marvel.gif')`,
+              backgroundSize: 'cover'
+            }}
+          >
             <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
               Join the NetBinge Community
             </h2>
             <p className="max-w-2xl text-gray-600 dark:text-gray-300">
               Stay up-to-date on new arrivals, exclusive offers, and more.
             </p>
-            <button className="rounded-lg bg-primary px-8 py-3 text-base font-bold text-white transition hover:bg-opacity-90">
+            <a href="#" className="rounded-lg bg-white px-8 py-3 text-base font-bold text-black transition hover:bg-opacity-50 hover:scale-101">
               Sign Up for Our Newsletter
-            </button>
+            </a>
           </div>
         </section>
       </div>
