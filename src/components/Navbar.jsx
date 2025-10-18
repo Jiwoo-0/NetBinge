@@ -1,4 +1,4 @@
-import { navItems, COLORS } from "../constants";
+import { navItems, COLORS } from "../constants/DataList";
 import {Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/Logo.svg";

@@ -1,6 +1,6 @@
 import Navbar_ecom from "./Navbar_ecom";
 import Footer_ecom from "./Footer_ecom";
-import { featuredProducts_landingPage, categories_landingPage } from "../../constants";
+import { featuredProducts_landingPage, categories_landingPage } from "../../../constants/DataList";
 
 const Landing_page = () => {
   return (
@@ -23,7 +23,7 @@ const Landing_page = () => {
                 From iconic tees to collectible posters, find the perfect way to
                 show your love for cinema.
               </p>
-              <button className="rounded-lg bg-primary px-8 py-3 text-base font-bold text-white transition hover:bg-opacity-90">
+              <button className="rounded-lg bg-white px-8 py-3 text-base font-bold text-black transition hover:bg-opacity-90 hover:scale-105">
                 Shop Now
               </button>
             </div>
@@ -36,9 +36,9 @@ const Landing_page = () => {
           </h2>
           <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {featuredProducts_landingPage.map((product, index) => (
-              <div
+              <a
                 key={index}
-                className="w-64 min-w-64 snap-start sm:w-72 sm:min-w-72"
+                className="w-64 min-w-64 snap-start sm:w-72 sm:min-w-72 transition hover:scale-105"
               >
                 <div className="group flex flex-col gap-4">
                   <div
@@ -54,7 +54,7 @@ const Landing_page = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </section>
@@ -83,7 +83,7 @@ const Landing_page = () => {
             className="w-[90vw] bg-red-600/20 rounded-lg container mx-auto flex flex-col items-center gap-6 p-8 text-center lg:px-10"
             style={{
               backgroundImage: `linear-gradient(rgba(199, 30, 30, 0.2), rgba(199, 30, 30, 0.4)), url('/marvel.gif')`,
-              backgroundSize: 'cover'
+              backgroundSize: 'cover',
             }}
           >
             <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
