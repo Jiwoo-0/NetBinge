@@ -23,9 +23,9 @@ const Landing_page = () => {
                 From iconic tees to collectible posters, find the perfect way to
                 show your love for cinema.
               </p>
-              <button className="rounded-lg bg-white px-8 py-3 text-base font-bold text-black transition hover:bg-opacity-90 hover:scale-105">
+              <a href="/shop" className="rounded-lg bg-white px-8 py-3 text-base font-bold text-black transition hover:bg-opacity-90 hover:scale-105">
                 Shop Now
-              </button>
+              </a>
             </div>
           </div>
         </section>

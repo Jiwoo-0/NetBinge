@@ -1,8 +1,12 @@
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 import BrandLogo from '../../assets/Logo.svg';
 import { navItems_ecom } from '../../constants/DataList';
+import { useCart } from '../../constants/CartContext';
 
 const Navbar_ecom = () => {
+  const { cartItems } = useCart();
+  const itemCount = cartItems.length;
+
   return (
     <header className="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
         <div className="container mx-auto flex items-center justify-between px-4 py-3 lg:px-10">
@@ -28,9 +32,15 @@ const Navbar_ecom = () => {
           <div className="flex items-center gap-2">
             <a
               href='/cart'
+              onClick={()=>alert("Items: " + cartItems)}
               className="rounded-lg p-2 text-gray-600 hover:bg-primary/10 hover:text-primary dark:text-gray-300 dark:hover:bg-primary/20 dark:hover:text-primary"
             >
               <LocalMallIcon />
+              {itemCount > 0 && (
+                <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-600 text-xs font-bold text-white">
+                  {itemCount}
+                </span>
+              )}              
             </a>
           </div>
         </div>

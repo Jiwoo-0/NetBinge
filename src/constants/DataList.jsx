@@ -74,6 +74,7 @@ export const shirts = [
     tag: "Apparel",
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuAA_c-kAQgITOmbjCpb4Q__XfPexIalvcucRR54ED0vEbA7X6Kt5YUMmdgmFUv2jayHfGrntbITU7umls48xXlcuCYN-vBd8776Vc-yySakGRVNyZn0n5oPjjxuxhfkjPz_YhuddCshiBquDdoNxWZIEiXFW5WLNorPGoWSAr8knXv5XRQvr3XNiXmtmoiOCThLHBQg1AJb67KtQCEFgLmFloa9ZhNsFYZNE0fl3Mg0Y_vKg5gWx-DGBi0_I9lzl9sPK7IeCO2yyO8',
+    details: "This is a shirt"
   },
   {
     title: 'The Overlook Tee',
@@ -81,6 +82,7 @@ export const shirts = [
     price: '$25.00',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuAb-0r8fBKY-G7lZDyE9MJCVOJXf1iR12KP0iGigcZdGf4YnOEOEDrzDDfV12OZoGQaJYf4gjUZ3oB19d4LxeyPusyj_lhxLXRy6sgnXS1WxMKsENZApObHC21qP4FLAcAqOkegr6qnpaALGPOgxA3dxxj-K8LqgrfZJf00sk09UvxSW67MoMQqkxgQT69QQNh14bZ9bP2l23YZUwcVs8ShLLRD_-So_1EjXmJOTakbBiGPNgKcTpCcoL3pVOI0Mgbcifb0fgY4AaE',
+    details: "This is a shirt"
   },
   {
     title: 'Stranger Things Tee',
@@ -88,6 +90,7 @@ export const shirts = [
     price: '$25.00',
     image:
       'https://m.media-amazon.com/images/I/71qYMcv87+L._UY1000_.jpg',
+    details: "This is a shirt"
   },
 ];
 

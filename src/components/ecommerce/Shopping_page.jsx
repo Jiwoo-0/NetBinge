@@ -1,8 +1,11 @@
 import Navbar_ecom from "./Navbar_ecom";
 import Footer_ecom from "./Footer_ecom";
 import { shirts, posters, mugs } from "../../constants/DataList";
+import { useCart } from "../../constants/CartContext";
 
 const Shopping_page = () => {
+  const { addToCart, cartItems } = useCart();
+
   return (
     <>
       <Navbar_ecom />
@@ -17,13 +20,13 @@ const Shopping_page = () => {
             </p>
           </div>
           <div className="space-y-16">
-            <section id="apparel" class="Apparel">
+            <section id="apparel">
               <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
                 Apparel
               </h2>
               <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {shirts.map((shirt, index) => (
-                  <div key={index} className="group relative">
+                  <div key={index} className="p-2 rounded-xl transition hover:bg-gray-400/10 hover:scale-101">
                     <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-800">
                       <img
                         src={shirt.image}
@@ -35,10 +38,6 @@ const Shopping_page = () => {
                       <div>
                         <h3 className="text-sm text-gray-700 dark:text-gray-300">
                           <a href="#">
-                            <span
-                              aria-hidden="true"
-                              className="absolute inset-0"
-                            ></span>
                             {shirt.title}
                           </a>
                         </h3>
@@ -50,14 +49,19 @@ const Shopping_page = () => {
                         {shirt.price}
                       </p>
                     </div>
-                    <button className="border mt-4 w-full rounded-lg bg-white px-4 py-2 text-sm font-bold text-black opacity-0 transition hover:bg-opacity-90 group-hover:opacity-100">
+                    <button 
+                      onClick={()=>{
+                        addToCart({...shirt, quantity: 1});
+                        console.log(shirt);
+                      }} 
+                      className="mt-4 w-full rounded-lg bg-green-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-green-600">
                       Add to Cart
                     </button>
                   </div>
                 ))}
               </div>
             </section>
-            <section id="posters" class="Posters">
+            <section id="posters">
               <div>
                 <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
                   Posters
@@ -99,7 +103,7 @@ const Shopping_page = () => {
                 </div>
               </div>
             </section>
-            <section id="mugs" class="Mugs">
+            <section id="mugs">
               <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
                 Mugs
               </h2>
