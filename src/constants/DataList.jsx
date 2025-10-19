@@ -6,10 +6,10 @@ export const navItems = [
 ];
 
 export const navItems_ecom = [
-  { label: "Shop", href: "/shop" },
-  { label: "Apparel", href: "/shop#apparel" },
-  { label: "Posters", href: "/shop#posters" },
-  { label: "Mugs", href: "/shop#mugs" },
+  { label: "Shop", href: "https://net-binge.vercel.app/shop" },
+  { label: "Apparel", href: "https://net-binge.vercel.app/shop#apparel" },
+  { label: "Posters", href: "https://net-binge.vercel.app/shop#posters" },
+  { label: "Mugs", href: "https://net-binge.vercel.app/shop#mugs" },
 ];
 
 export const featuredProducts_landingPage = [
