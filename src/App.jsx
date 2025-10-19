@@ -15,9 +15,9 @@ function App() {
       {/* <Shopping_page /> */}
       <BrowserRouter>
         <Routes>
-          <Route path="https://net-binge.vercel.app/" element={<Landing_page />}></Route>
-          <Route path="https://net-binge.vercel.app/shop" element={<Shopping_page />}></Route>
-          <Route path="https://net-binge.vercel.app/cart" element={<ShoppingCart_page />}></Route>
+          <Route path="/" element={<Landing_page />}></Route>
+          <Route path="/shop" element={<Shopping_page />}></Route>
+          <Route path="/cart" element={<ShoppingCart_page />}></Route>
         </Routes>
       </BrowserRouter>
     </>
