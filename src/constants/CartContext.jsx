@@ -43,6 +43,22 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+  // const updateAmount = (product, newAmount) => {
+  //   let updatedBasket;
+  //   if (newAmount<= 0) {
+  //     updatedBasket = state.products.filter((p)=>p.name !== product.name);
+  //   } else {
+  //     updatedBasket = state.products.map((p)=>p.name === product.name ? { ...p, amount: newAmount} : p);
+  //   }
+
+  //   updatePrice(updatedBasket);
+
+  //   dispatch({
+  //     type: "update amount",
+  //     payload: updatedBasket,
+  //   })
+  // }
+
   const itemCount = state.products.length;
 
   const value = {
@@ -51,6 +67,7 @@ export const CartProvider = ({ children }) => {
     addToBasket,
     removeFromBasket,
     itemCount,
+    // updateAmount
   };
 
   return <CartContext.Provider value={value}>
