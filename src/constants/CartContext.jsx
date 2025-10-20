@@ -1,23 +1,59 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useReducer } from "react";
+import reducer, { initialState } from "./reducer";
 
-const CartContext = createContext();
-
-export const useCart = () => useContext(CartContext);
+export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-  const addToCart = (item) => {
-    setCartItems((prev) => {
-      const next = [...prev, item];
-      console.log("CartContext - added:", item, "-> new cart:", next);
-      return next;
+  const addToBasket = (product) => {
+    const updatedBasket = state.products;
+    updatedBasket.push(product);
+
+    updatePrice(updatedBasket);
+
+    dispatch({
+      type: "add",
+      payload: updatedBasket,
     });
   };
 
-  return (
-    <CartContext.Provider value={{ cartItems, addToCart }}>
-      {children}
-    </CartContext.Provider>
-  );
+  const removeFromBasket = (product) => {
+    const updatedBasket = state.products.filter(
+      (currentProduct) => currentProduct.name !== product.name
+    );
+
+    updatePrice(updatedBasket);
+
+    dispatch({
+      type: "remove",
+      payload: updatedBasket,
+    });
+  };
+
+  const updatePrice = (products) => {
+    let total = 0;
+    products.forEach((product) => {
+      total += product.price;
+    });
+
+    dispatch({
+      type: "update price",
+      payload: total,
+    });
+  };
+
+  const itemCount = state.products.length;
+
+  const value = {
+    total: state.total,
+    products: state.products,
+    addToBasket,
+    removeFromBasket,
+    itemCount,
+  };
+
+  return <CartContext.Provider value={value}>
+    {children}
+  </CartContext.Provider>;
 };

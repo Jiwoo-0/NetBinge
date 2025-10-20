@@ -1,11 +1,12 @@
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 import BrandLogo from '../../assets/Logo.svg';
 import { navItems_ecom } from '../../constants/DataList';
-import { useCart } from '../../constants/CartContext';
+import { CartContext } from '../../constants/CartContext';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar_ecom = () => {
-  const { cartItems } = useCart();
-  const itemCount = cartItems.length;
+  const { itemCount } = useContext(CartContext);
 
   return (
     <header className="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
@@ -19,28 +20,30 @@ const Navbar_ecom = () => {
 
           <nav className="hidden items-center gap-6 lg:flex">
             {navItems_ecom.map((item, index) => (
-              <a
+              <Link
                 key={index}
                 className="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
-                href={item.href}
+                to={item.href}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           <div className="flex items-center gap-2">
             <a
               href='/cart'
-              onClick={()=>alert("Items: " + cartItems)}
               className="rounded-lg p-2 text-gray-600 hover:bg-primary/10 hover:text-primary dark:text-gray-300 dark:hover:bg-primary/20 dark:hover:text-primary"
             >
               <LocalMallIcon />
-              {itemCount > 0 && (
+              <span className="relative left-3 -top-7 flex h-5 w-5 items-center justify-center rounded-full bg-red-600 text-xs font-bold text-white">
+                  {itemCount}
+                </span>
+              {/* {itemCount > 0 && (
                 <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-600 text-xs font-bold text-white">
                   {itemCount}
                 </span>
-              )}              
+              )}               */}
             </a>
           </div>
         </div>
