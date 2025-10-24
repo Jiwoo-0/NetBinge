@@ -70,7 +70,7 @@ export const shirts = [
   {
     name: 'The Vincent Tee',
     color: 'Black',
-    price: 25.00,
+    price: 225.00,
     tag: "Apparel",
     image:
     'https://lh3.googleusercontent.com/aida-public/AB6AXuAA_c-kAQgITOmbjCpb4Q__XfPexIalvcucRR54ED0vEbA7X6Kt5YUMmdgmFUv2jayHfGrntbITU7umls48xXlcuCYN-vBd8776Vc-yySakGRVNyZn0n5oPjjxuxhfkjPz_YhuddCshiBquDdoNxWZIEiXFW5WLNorPGoWSAr8knXv5XRQvr3XNiXmtmoiOCThLHBQg1AJb67KtQCEFgLmFloa9ZhNsFYZNE0fl3Mg0Y_vKg5gWx-DGBi0_I9lzl9sPK7IeCO2yyO8',
@@ -80,7 +80,7 @@ export const shirts = [
   {
     name: 'The Overlook Tee',
     color: 'White',
-    price: 30.00,
+    price: 230.00,
     image:
     'https://lh3.googleusercontent.com/aida-public/AB6AXuAb-0r8fBKY-G7lZDyE9MJCVOJXf1iR12KP0iGigcZdGf4YnOEOEDrzDDfV12OZoGQaJYf4gjUZ3oB19d4LxeyPusyj_lhxLXRy6sgnXS1WxMKsENZApObHC21qP4FLAcAqOkegr6qnpaALGPOgxA3dxxj-K8LqgrfZJf00sk09UvxSW67MoMQqkxgQT69QQNh14bZ9bP2l23YZUwcVs8ShLLRD_-So_1EjXmJOTakbBiGPNgKcTpCcoL3pVOI0Mgbcifb0fgY4AaE',
     details: "This is a shirt",
@@ -89,7 +89,7 @@ export const shirts = [
   {
     name: 'Stranger Things Tee',
     color: 'Black',
-    price: 50.00,
+    price: 350.00,
     image:
     'https://m.media-amazon.com/images/I/71qYMcv87+L._UY1000_.jpg',
     details: "This is a shirt",
@@ -120,7 +120,7 @@ export const mugs = [
   {
     name: 'Reel Life Mug',
     material: 'Ceramic',
-    price: 12,
+    price: 79,
     image:
     'https://lh3.googleusercontent.com/aida-public/AB6AXuCLdstatAUCmhbLj1KLi0-HJNPkX3zxyLCa5hdi_dbeGgY_ty_hWVmA3D-Yy9b18_TPy0IFg2gv4VKfnN7Hl270Hk6FGZE3RS3qpBNz0PnKemQWcNL4TtOI-M9NOCRaxYUlJcVVnDYsD6wfd5c84lF2gQWD3fcwmWxCZqgF9kk38CC2nqRvzwdkzwvHUghoD54v26e0xt4dsCKuhEclq745HGTpcJs1xa0Ejer8BZ2Wj9KtJNVqFa7_zyD_Ridcy3NQok35nSGvMvY',
     amount: 1,
@@ -128,7 +128,7 @@ export const mugs = [
   {
     name: 'Scary Movie Mug',
     material: 'Ceramic',
-    price: 15,
+    price: 69,
     image:
     'https://lh3.googleusercontent.com/aida-public/AB6AXuBt5KbdQztFGp1IeWTrrBTgqvAXI4uIixf0tWc4BsTNBGj3YINFfJz3dJGFLJyTlZPCucsJLDH5tpBW8U7Q6Y5cHo3nUbG5_nvl9nJ3YEjnrUqFBoXmf1ZGs3SmrrH17-62sbEe1DoG6aFQh1zKSeBEjYpmy48Dz5OzX0vyXMVykv47K0wVvBjihFMerDoxCwaJFp2cWXdYIccftJKq1mQp_Tz6mQ4B0AONbZOcr8jLL1J0XsKg_nV7Xyk351BNSq7ym1s28QUcGIY',
     amount: 1,
