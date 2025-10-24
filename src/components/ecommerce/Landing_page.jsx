@@ -31,7 +31,7 @@ const Landing_page = () => {
         </section>
 
         <section className="container mx-auto px-4 py-10 lg:px-10">
-          <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
+          <h2 className="mb-6 text-2xl font-bold text-white sm:text-3xl">
             Featured Products
           </h2>
           <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -46,10 +46,10 @@ const Landing_page = () => {
                     style={{ backgroundImage: `url('${product.image}')` }}
                   ></div>
                   <div>
-                    <h3 className="font-medium text-gray-900 group-hover:text-primary dark:text-white">
+                    <h3 className="font-medium group-hover:text-primary text-white">
                       {product.title}
                     </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-sm text-gray-400">
                       {product.description}
                     </p>
                   </div>
@@ -60,7 +60,7 @@ const Landing_page = () => {
         </section>
 
         <section className="container mx-auto px-4 py-10 lg:px-10">
-          <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
+          <h2 className="mb-6 text-2xl font-bold text-white sm:text-3xl">
             Shop by Category
           </h2>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
@@ -70,7 +70,7 @@ const Landing_page = () => {
                   className="aspect-square w-full overflow-hidden rounded-lg bg-cover bg-center"
                   style={{ backgroundImage: `url('${category.image}')` }}
                 ></div>
-                <p className="mt-3 font-medium text-gray-900 group-hover:text-primary dark:text-white">
+                <p className="mt-3 font-medium  group-hover:text-primary text-white">
                   {category.name}
                 </p>
               </a>
@@ -86,10 +86,10 @@ const Landing_page = () => {
               backgroundSize: 'cover',
             }}
           >
-            <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+            <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Join the NetBinge Community
             </h2>
-            <p className="max-w-2xl text-gray-600 dark:text-gray-300">
+            <p className="max-w-2xl text-gray-300">
               Stay up-to-date on new arrivals, exclusive offers, and more.
             </p>
             <a href="#" className="rounded-lg bg-white px-8 py-3 text-base font-bold text-black transition hover:bg-opacity-50 hover:scale-101">

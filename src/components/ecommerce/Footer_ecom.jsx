@@ -6,14 +6,14 @@ const Footer_ecom = () => {
   const socialIcons = [ FacebookIcon, InstagramIcon, XIcon ];
 
   return (
-    <footer className="bg-gray-100 dark:bg-black/20">
+    <footer className="bg-black/20">
       <div className="container mx-auto px-4 py-10 text-center lg:px-10">
         <div className="mb-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
           {['About Us', 'Contact', 'FAQ', 'Privacy Policy', 'Terms of Service'].map((item, index) => (
             <a
               key={index}
               href="#"
-              className="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+              className="text-sm hover:text-white text-gray-400"
             >
               {item}
             </a>
@@ -25,14 +25,14 @@ const Footer_ecom = () => {
             <a
               key={index}
               href="#"
-              className="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+              className="text-gray-400 hover:text-white"
             >
               <Icon fontSize="medium" />
             </a>
           ))}
         </div>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400">
+        <p className="text-sm text-gray-400">
           © 2025 NetBinge ● Created By Aaron Ropeta ● All rights reserved.
         </p>
       </div>

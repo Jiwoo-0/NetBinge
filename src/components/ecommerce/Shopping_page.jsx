@@ -20,16 +20,16 @@ const Shopping_page = () => {
       <div className="flex-grow">
         <div className="container mx-auto px-4 py-10 lg:px-10">
           <div className="mb-12 text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
+            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
               Shop Our Collection
             </h1>
-            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
+            <p className="mt-4 text-lg text-gray-300">
               Find the perfect merchandise to celebrate your favorite films
             </p>
           </div>
           <div className="space-y-16">
             <section id="apparel">
-              <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
+              <h2 className="mb-6 text-2xl font-bold text-white sm:text-3xl">
                 Apparel
               </h2>
               <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -40,7 +40,7 @@ const Shopping_page = () => {
             </section>
             <section id="posters">
               <div>
-                <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
+                <h2 className="mb-6 text-2xl font-bold text-white sm:text-3xl">
                   Posters
                 </h2>
                 <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -51,7 +51,7 @@ const Shopping_page = () => {
               </div>
             </section>
             <section id="mugs">
-              <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
+              <h2 className="mb-6 text-2xl font-bold text-white sm:text-3xl">
                 Mugs
               </h2>
               <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

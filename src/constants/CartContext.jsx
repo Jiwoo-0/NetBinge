@@ -6,9 +6,29 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  // const addToBasket = (product) => {
+  //   const updatedBasket = state.products;
+  //   updatedBasket.push(product);
+
+  //   updatePrice(updatedBasket);
+
+  //   dispatch({
+  //     type: "add",
+  //     payload: updatedBasket,
+  //   });
+  // };
+
   const addToBasket = (product) => {
-    const updatedBasket = state.products;
-    updatedBasket.push(product);
+    let updatedBasket = [...state.products];
+    const existingProductIndex = updatedBasket.findIndex(
+      (p) => p.name === product.name
+    );
+
+    if (existingProductIndex !== -1) {
+      updatedBasket[existingProductIndex].amount += 1;
+    } else {
+      updatedBasket.push({ ...product, amount: 1 });
+    }
 
     updatePrice(updatedBasket);
 
@@ -31,11 +51,23 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+  // const updatePrice = (products) => {
+  //   let total = 0;
+  //   products.forEach((product) => {
+  //     total += product.price;
+  //   });
+
+  //   dispatch({
+  //     type: "update price",
+  //     payload: total,
+  //   });
+  // };
+
   const updatePrice = (products) => {
-    let total = 0;
-    products.forEach((product) => {
-      total += product.price;
-    });
+    const total = products.reduce(
+      (acc, product) => acc + product.price * product.amount,
+      0
+    );
 
     dispatch({
       type: "update price",
@@ -59,6 +91,19 @@ export const CartProvider = ({ children }) => {
   //   })
   // }
 
+  const updateAmount = (product, newAmount) => {
+    const updatedBasket = state.products.map((p) =>
+      p.name === product.name ? { ...p, amount: newAmount } : p
+    );
+
+    updatePrice(updatedBasket);
+
+    dispatch({
+      type: "add", 
+      payload: updatedBasket,
+    });
+  };
+
   const itemCount = state.products.length;
 
   const value = {
@@ -67,10 +112,8 @@ export const CartProvider = ({ children }) => {
     addToBasket,
     removeFromBasket,
     itemCount,
-    // updateAmount
+    updateAmount
   };
 
-  return <CartContext.Provider value={value}>
-    {children}
-  </CartContext.Provider>;
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
