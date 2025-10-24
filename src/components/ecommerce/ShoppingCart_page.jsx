@@ -23,7 +23,7 @@ const ShoppingCart_page = () => {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
             <div className="lg:col-span-2 space-y-6">
               {products.map((item, index) => (
-                <CartProduct key={index} item={item}/>
+                <CartProduct key={index} item={item} />
               ))}
 
               <div className="mt-8">
@@ -38,7 +38,7 @@ const ShoppingCart_page = () => {
             </div>
 
             {/* Order Summary */}
-            <div className="sticky top-20 h-fit rounded-lg bg-black/20">
+            <div className="sticky p-8 top-20 h-fit rounded-lg bg-black/20">
               <h2 className="mb-4 text-xl font-bold text-white">
                 Order Summary
               </h2>
@@ -56,9 +56,12 @@ const ShoppingCart_page = () => {
                   <span className="text-lg">₱{(total + 5).toFixed(2)}</span>
                 </div>
               </div>
-              <button className="mt-6 w-full rounded-lg bg-green-600 px-6 py-3 text-lg font-bold text-white transition hover:bg-green-500">
+              <Link
+                to="/checkout"
+                className="mt-6 w-full rounded-lg bg-green-600 px-6 py-3 text-lg font-bold text-white transition hover:bg-green-500 text-center block"
+              >
                 Proceed to Checkout
-              </button>
+              </Link>
             </div>
           </div>
         </section>
